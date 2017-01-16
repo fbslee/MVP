@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="shopList">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.js"></script>
+    <script src="main.js"></script>
+<head>
+	<title>The Tech Shopaholic</title>
+</head>
+<body ng-controller="budgetControl">
+    <h1>The Tech Shopaholic</h1>
+	<div ng-view></div>
+
+    <input type="number" ng-model="budget">
+    	<button ng-click="setBudget()">Set a budget</button>
+    <h2>Your initial budget is ${{ shopBudget }}</h2>
+    
+    <div>
+    	<nav class="navigation">
+    	<ul>
+      	<li>
+          	<a href="#/pricecheck">Add Item to List</a>
+      	</li>
+
+  	</nav>
+  	</div>
+
+    <ul>
+    	<li ng-repeat="item in List">{{item}}</li>
+    	</ul>
+
+    <h3>Your remaining budget is $</h3>
+</body>
+</html>
